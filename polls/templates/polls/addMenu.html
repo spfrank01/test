@@ -1,0 +1,22 @@
+<h1> Add Question </h1>
+<form>
+New Question : 
+<input type="text" name="newQuestion"><br>
+<input type="submit" value="Submit">
+</form>
+
+<!--<form action="{% url 'polls:vote' question.id %}" method="post">
+{% csrf_token %}
+{% for choice in question.choice_set.all %}
+    <input type="text" />
+<!--
+<h1> Add Choice </h1>
+
+<form action="{% url 'polls:vote' question.id %}" method="post">
+{% csrf_token %}
+{% for choice in question.choice_set.all %}
+    <input type="radio" name="addChoice" id="question{{ forloop.counter }}" value="{{ question.id }}" />
+    <label for="question{{ forloop.counter }}">{{ choice.choice_text }}</label><br />
+{% endfor %}
+<input type="submit" value="Select" />
+</form> -->

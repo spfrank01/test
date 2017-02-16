@@ -1,0 +1,15 @@
+
+{% if latest_question_list %}
+    <table bgcolor=YELLOW BORDER=10 BORDERCOLOR=BLACK>
+    <ul>
+    {% for question in latest_question_list %}
+        <td><li><a href="{% url 'polls:detail' question.id %}">
+{{ question.question_text }}</a> </td>
+	<td>&emsp; question id &emsp; <b> {{ question.id }}</b></li></td>
+	</tr>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+    </table>
+{% endif %}
